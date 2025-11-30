@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.6%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.6%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.6%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 9.0%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.6%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 0 84% 60%;
+    --chart-3: 38 92% 50%;
+    --chart-4: 262 80% 50%;
+    --chart-5: 262 80% 50%;
+  }
+
+  .dark {
+    --background: 0 0% 3.6%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 98%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 90% 56%;
+    --chart-2: 10 80% 60%;
+    --chart-3: 40 90% 50%;
+    --chart-4: 280 85% 50%;
+    --chart-5: 280 85% 50%;
+  }
+}
+
+@layer components {
+  .hover-elevate {
+    transition: all 0.2s ease-out;
+  }
+
+  .hover-elevate:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+  }
+
+  .dark .hover-elevate:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .active-elevate-2 {
+    transition: all 0.1s ease-out;
+  }
+
+  .active-elevate-2:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    transform: translateY(0px);
+  }
+
+  .toggle-elevate {
+    transition: all 0.2s ease-out;
+    position: relative;
+  }
+
+  .toggle-elevate.toggle-elevated {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .dark .toggle-elevate.toggle-elevated {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground;
+}
